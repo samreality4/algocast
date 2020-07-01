@@ -8,6 +8,19 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+let prevNum = 0;
+let currNum = 1;
+let array = [0,1]
+
+while(array.length <= n + 1){
+currNum = prevNum + currNum;
+prevNum = currNum - prevNum;
+array.push(currNum);
+}
+
+return array[n];
+
+}
 
 module.exports = fib;
